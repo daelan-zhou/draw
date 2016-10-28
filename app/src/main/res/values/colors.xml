@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="drawTitleTvEnable">#dc952c</color>
+    <color name="drawTitleTvUnable">#f6d480</color>
+    
+    <color name="draw_color_0">#f04333</color>
+    <color name="draw_color_1">#ff9700</color>
+    <color name="draw_color_2">#ffeb3c</color>
+    <color name="draw_color_3">#8bc243</color>
+    <color name="draw_color_4">#07a5f9</color>
+    <color name="draw_color_5">#0238d0</color>
+    <color name="draw_color_6">#000000</color>
+    <color name="draw_color_7">#bebebe</color>
+    
+</resources>

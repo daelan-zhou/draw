@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:textSize="14sp"
+        android:text="@string/color"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+            <ImageView
+                android:id="@+id/iv_0"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_0"
+                android:src="@mipmap/ic_ok"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+            <ImageView
+                android:id="@+id/iv_1"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_1"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+            <ImageView
+                android:id="@+id/iv_2"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_2"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+            <ImageView
+                android:id="@+id/iv_3"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_3"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+            <ImageView
+                android:id="@+id/iv_4"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_4"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+            <ImageView
+                android:id="@+id/iv_5"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_5"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+            <ImageView
+                android:id="@+id/iv_6"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_6"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/drawMenuColorLay">
+
+            <ImageView
+                android:id="@+id/iv_7"
+                style="@style/drawMenuColorLayIv"
+                android:background="@drawable/draw_colorbg_7"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    
+</LinearLayout>
