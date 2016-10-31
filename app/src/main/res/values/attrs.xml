@@ -8,5 +8,12 @@
         <attr name="metaButtonBarStyle" format="reference" />
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
-
+    
+    
+    <string-array name="shape">
+        <item>任意</item>
+        <item>直线</item>
+        <item>方形</item>
+        <item>圆形</item>
+    </string-array>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_shape"
     android:orientation="vertical" 
     android:padding="5dp"
     android:background="#ffffff"
@@ -12,13 +13,21 @@
         android:textSize="14sp"
         android:text="@string/shape"/>
     
-    <LinearLayout
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:entries="@array/shape"/>
+    
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
         
         <ImageView
+            android:id="@+id/iv_shape"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -30,6 +39,6 @@
             android:layout_weight="1"
             android:src="@mipmap/more"/>
         
-    </LinearLayout>
+    </LinearLayout>-->
     
 </LinearLayout>
