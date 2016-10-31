@@ -18,7 +18,8 @@
             android:id="@+id/frag_menu_type"
             android:name="com.ikkong.draw.fragment.DrawMenuTypeFragment"
             android:layout_width="82dp"
-            android:layout_height="100dp"/>
+            android:layout_height="100dp"
+            tools:layout="@layout/draw_menu_type" />
         
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,7 +27,13 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:orientation="vertical">
-            <include layout="@layout/draw_menu_size"/>
+            <fragment
+                android:id="@+id/frag_menu_size"
+                android:name="com.ikkong.draw.fragment.DrawMenuSizeFragment"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                tools:layout="@layout/draw_menu_size" />
+            
             <include layout="@layout/draw_menu_shape"/>
         </LinearLayout>
 
@@ -35,7 +42,8 @@
             android:name="com.ikkong.draw.fragment.DrawMenuColorFragment"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="100dp"/>
+            android:layout_height="100dp"
+            tools:layout="@layout/draw_menu_color" />
     </LinearLayout>
 
     
