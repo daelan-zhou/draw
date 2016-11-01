@@ -2,7 +2,7 @@ package com.ikkong.draw.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +26,7 @@ public class DrawMenuSizeFragment extends Fragment implements View.OnClickListen
     LinearLayout laySize;
     TextView tvSize;
     int size;
+    OnChangeSizeListerner onChangeSizeListerner;
 
     @Nullable
     @Override
@@ -51,10 +52,22 @@ public class DrawMenuSizeFragment extends Fragment implements View.OnClickListen
         public void onSeekBarValueChange(int i) {
             size = i;
             tvSize.setText(size+"");
+            onChangeSizeListerner.onChangeSize(size+1);
         }
     };
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        try{
+            onChangeSizeListerner = (OnChangeSizeListerner) getActivity();
+        }catch (ClassCastException e){
+            throw new ClassCastException(getActivity().toString()
+                    + " must implement OnChangeSizeListerner");
+        }
+    }
     
-    public int getSize(){
-        return size;
+    public interface OnChangeSizeListerner{
+        void onChangeSize(int size);
     }
 }

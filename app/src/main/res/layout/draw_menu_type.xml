@@ -18,7 +18,7 @@
             android:id="@+id/iv_pencil_top"
             android:layout_width="match_parent"
             android:layout_height="10dp" 
-            android:src="@drawable/pencil_top_0"/>
+            android:src="@drawable/pencil_top_6"/>
         <ImageView
             android:id="@+id/iv_pencil"
             android:layout_width="match_parent"

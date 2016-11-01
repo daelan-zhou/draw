@@ -13,6 +13,9 @@ public class Constant {
     public enum DrawType{
         PENCIL,ERASER
     }
+    public enum DrawShape{
+        LINE,RECT,PEN,CIRCLE,TEXT
+    }
     public static final int COLORS[] = new int[]{
             R.color.draw_color_0,
             R.color.draw_color_1,

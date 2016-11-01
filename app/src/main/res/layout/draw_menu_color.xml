@@ -23,8 +23,7 @@
             <ImageView
                 android:id="@+id/iv_0"
                 style="@style/drawMenuColorLayIv"
-                android:background="@drawable/draw_colorbg_0"
-                android:src="@mipmap/ic_ok"/>
+                android:background="@drawable/draw_colorbg_0"/>
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +75,8 @@
             <ImageView
                 android:id="@+id/iv_6"
                 style="@style/drawMenuColorLayIv"
-                android:background="@drawable/draw_colorbg_6"/>
+                android:background="@drawable/draw_colorbg_6"
+                android:src="@mipmap/ic_ok"/>
         </LinearLayout>
         <LinearLayout
             style="@style/drawMenuColorLay">

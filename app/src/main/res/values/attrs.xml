@@ -15,5 +15,6 @@
         <item>直线</item>
         <item>方形</item>
         <item>圆形</item>
+        <item>文字</item>
     </string-array>
 </resources>
