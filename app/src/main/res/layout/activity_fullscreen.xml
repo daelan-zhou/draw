@@ -42,14 +42,34 @@
                 tools:layout="@layout/draw_menu_shape"/>
             
         </LinearLayout>
-
-        <fragment
-            android:id="@+id/frag_menu_color"
-            android:name="com.ikkong.draw.fragment.DrawMenuColorFragment"
+        
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="100dp"
-            tools:layout="@layout/draw_menu_color" />
+            android:layout_height="100dp">
+            
+            <TextView
+                android:id="@+id/tv_clearall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@drawable/draw_title_tv"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:gravity="bottom|right"
+                android:text="@string/clearall"/>
+
+            <fragment
+                android:id="@+id/frag_menu_color"
+                android:name="com.ikkong.draw.fragment.DrawMenuColorFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/draw_menu_color" />
+            
+        </FrameLayout>
+
+        
     </LinearLayout>
 
     

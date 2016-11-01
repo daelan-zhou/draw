@@ -2,12 +2,16 @@ package com.ikkong.draw;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
+import com.ikkong.draw.common.Constant;
 import com.ikkong.draw.fragment.DrawMenuColorFragment;
 import com.ikkong.draw.fragment.DrawMenuTypeFragment;
 
 public class FullscreenActivity extends AppCompatActivity implements 
-        DrawMenuColorFragment.onSelPencilColorListerner {
+        DrawMenuColorFragment.onSelPencilColorListerner,
+        DrawMenuTypeFragment.OnTypeChangeListerner {
+    TextView tvClearAll;
     
     DrawMenuTypeFragment drawMenuTypeFragment;
     DrawMenuColorFragment drawMenuColorFragment;
@@ -25,5 +29,14 @@ public class FullscreenActivity extends AppCompatActivity implements
     public void onSelPencilColor(int i) {
         //选了颜色改变笔尖
         drawMenuTypeFragment.changePencilTopColor(i);
+    }
+
+    @Override
+    public void onTypeChange(Constant.DrawType type) {
+        if(type == Constant.DrawType.ERASER){
+            getFragmentManager().beginTransaction().hide(drawMenuColorFragment);
+        }else if(type == Constant.DrawType.PENCIL){
+            getFragmentManager().beginTransaction().show(drawMenuColorFragment);
+        }
     }
 }

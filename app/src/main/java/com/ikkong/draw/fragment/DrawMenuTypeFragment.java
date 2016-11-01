@@ -30,6 +30,7 @@ public class DrawMenuTypeFragment extends Fragment implements View.OnClickListen
     private ImageView ivPencilTop;
     private LinearLayout layPencil,layEraser;
     private Constant.DrawType drawType;
+    private OnTypeChangeListerner listerner;
 
     @Nullable
     @Override
@@ -56,6 +57,7 @@ public class DrawMenuTypeFragment extends Fragment implements View.OnClickListen
             lp1.setMargins(d2p(5),d2p(20),d2p(6),d2p(0));
             layEraser.setLayoutParams(lp1);
             drawType = Constant.DrawType.ERASER;
+            listerner.onTypeChange(drawType);
         }else if(view.getId() == R.id.lay_pencil){
             Log.d("onClick","====lay_pencil====");
             LinearLayout.LayoutParams lp2 = (LinearLayout.LayoutParams) layPencil.getLayoutParams();
@@ -65,6 +67,7 @@ public class DrawMenuTypeFragment extends Fragment implements View.OnClickListen
             lp1.setMargins(d2p(5),d2p(70),d2p(6),d2p(0));
             layEraser.setLayoutParams(lp1);
             drawType = Constant.DrawType.PENCIL;
+            listerner.onTypeChange(drawType);
         }
     }
 
@@ -100,12 +103,27 @@ public class DrawMenuTypeFragment extends Fragment implements View.OnClickListen
                 break;
         }
     }
-    
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        try{
+            listerner = (OnTypeChangeListerner) getActivity();
+        }catch (ClassCastException e){
+            throw new ClassCastException(getActivity().toString()
+                    + " must implement OnTypeChangeListerner");
+        }
+    }
+
     public Constant.DrawType nowType(){
         return drawType;
     }
     
     private int d2p(int dp){
         return DensityUtil.dip2px(getActivity(),dp);
+    }
+    
+    public interface OnTypeChangeListerner{
+        void onTypeChange(Constant.DrawType type);
     }
 }
