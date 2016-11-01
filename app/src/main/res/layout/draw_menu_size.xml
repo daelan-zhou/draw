@@ -25,12 +25,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="22"/>
+            android:text="16"/>
         <ImageView
             android:id="@+id/iv"
-            android:layout_width="0dp"
+            android:layout_width="19dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:src="@mipmap/more"/>
         
     </LinearLayout>

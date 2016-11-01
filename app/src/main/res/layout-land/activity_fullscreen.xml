@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    tools:context="com.ikkong.draw.FullscreenActivity">
+    
+    <include layout="@layout/draw_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        
+    
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+        <fragment
+            android:id="@+id/frag_menu_type"
+            android:name="com.ikkong.draw.fragment.DrawMenuTypeFragment"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            tools:layout="@layout/draw_menu_type" />
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+            <fragment
+                android:id="@+id/frag_menu_size"
+                android:name="com.ikkong.draw.fragment.DrawMenuSizeFragment"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                tools:layout="@layout/draw_menu_size" />
+            <fragment
+                android:id="@+id/frag_menu_shape"
+                android:name="com.ikkong.draw.fragment.DrawMenuShapeFragment"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                tools:layout="@layout/draw_menu_shape"/>
+            
+        </LinearLayout>
+        
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            
+            <TextView
+                android:id="@+id/tv_clearall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@drawable/draw_title_tv"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:gravity="bottom|right"
+                android:text="@string/clearall"/>
+
+            <fragment
+                android:id="@+id/frag_menu_color"
+                android:name="com.ikkong.draw.fragment.DrawMenuColorFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/draw_menu_color" />
+            
+        </FrameLayout>
+
+        
+    </LinearLayout>
+
+    <com.vilyever.drawingview.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/White"/>
+    </LinearLayout>
+
+</LinearLayout>
