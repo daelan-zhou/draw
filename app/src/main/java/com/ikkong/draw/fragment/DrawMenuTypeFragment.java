@@ -14,9 +14,6 @@ import com.ikkong.draw.R;
 import com.ikkong.draw.common.Constant;
 import com.ikkong.draw.util.DensityUtil;
 
-import static com.ikkong.draw.R.id.iv_eraser;
-import static com.ikkong.draw.R.id.iv_pencil;
-
 /**
  * Author:  ikkong
  * Email:   ikkong@163.com
@@ -25,8 +22,6 @@ import static com.ikkong.draw.R.id.iv_pencil;
  */
 
 public class DrawMenuTypeFragment extends Fragment implements View.OnClickListener{
-    private ImageView ivEraser;
-    private ImageView ivPencil;
     private ImageView ivPencilTop;
     private LinearLayout layPencil,layEraser;
     private Constant.DrawType drawType;
@@ -36,8 +31,6 @@ public class DrawMenuTypeFragment extends Fragment implements View.OnClickListen
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = View.inflate(getActivity(), R.layout.draw_menu_type,null);
-        ivEraser = (ImageView) v.findViewById(iv_eraser);
-        ivPencil = (ImageView) v.findViewById(iv_pencil);
         ivPencilTop = (ImageView) v.findViewById(R.id.iv_pencil_top);
         layPencil = (LinearLayout) v.findViewById(R.id.lay_pencil);
         layEraser = (LinearLayout) v.findViewById(R.id.lay_eraser);
@@ -115,10 +108,6 @@ public class DrawMenuTypeFragment extends Fragment implements View.OnClickListen
         }
     }
 
-    public Constant.DrawType nowType(){
-        return drawType;
-    }
-    
     private int d2p(int dp){
         return DensityUtil.dip2px(getActivity(),dp);
     }

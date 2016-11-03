@@ -51,44 +51,37 @@ public class DrawMenuColorFragment extends Fragment implements View.OnClickListe
             case R.id.iv_0:
                 nowColorIndex = 0;
                 selColor(iv0);
-                listerner.onSelPencilColor(0);
                 break;
             case R.id.iv_1:
                 nowColorIndex = 1;
                 selColor(iv1);
-                listerner.onSelPencilColor(1);
                 break;
             case R.id.iv_2:
                 nowColorIndex = 2;
                 selColor(iv2);
-                listerner.onSelPencilColor(2);
                 break;
             case R.id.iv_3:
                 nowColorIndex = 3;
                 selColor(iv3);
-                listerner.onSelPencilColor(3);
                 break;
             case R.id.iv_4:
                 nowColorIndex = 4;
                 selColor(iv4);
-                listerner.onSelPencilColor(4);
                 break;
             case R.id.iv_5:
                 nowColorIndex = 5;
                 selColor(iv5);
-                listerner.onSelPencilColor(5);
                 break;
             case R.id.iv_6:
                 nowColorIndex = 6;
                 selColor(iv6);
-                listerner.onSelPencilColor(6);
                 break;
             case R.id.iv_7:
                 nowColorIndex = 7;
                 selColor(iv7);
-                listerner.onSelPencilColor(7);
                 break;
         }
+        listerner.onSelPencilColor(nowColorIndex);
     }
     
     private void selColor(ImageView iv){
@@ -116,9 +109,5 @@ public class DrawMenuColorFragment extends Fragment implements View.OnClickListe
 
     public interface onSelPencilColorListerner{
         void onSelPencilColor(int i);
-    }
-    
-    public int nowColor(){
-        return nowColorIndex;
     }
 }
